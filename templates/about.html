@@ -1,0 +1,128 @@
+{% block content %}
+<html>
+<head>
+    <style>
+        /* Resetting some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navigation {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .navigation a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #555555;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #333333;
+        }
+
+        /* Content Container */
+        .content-container {
+            margin-top: 80px;
+            text-align: center;
+            padding: 80px;
+            padding-top:0;
+        }
+
+        /* Title Styles */
+        .section-title {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Contributors Styles */
+         .contributors-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contributor {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .contributor img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .contributor-name {
+            margin-top: 10px;
+        }
+        p {
+            line-height: 1.6;
+            text-size:10;
+            text-align:justify;
+        }
+        h1 {
+            color: #333333;
+            margin-top: 30px;
+            text-align:center;
+        }
+    </style>
+    <title>About This - Smart Traffic System</title>
+</head>
+<body>
+    <div class="navigation">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+    <h1>Smart Traffic System - About Us</h1>
+    <div class="content-container">
+        <h2 class="section-title">About </h2>
+        <p>The ”Smart Traffic Light System Based on Vehicle Density” project aims to develop
+an intelligent traffic light system that dynamically adjusts signal timings based on realtime vehicle density. The You Only Look Once (YOLO) algorithm is employed to
+accurately detect and track vehicles within the camera’s field of view. The project is implemented using Python and Flask, a lightweight web framework for Python, for easy
+integration and deployment. The system uses the YOLO algorithm to monitor and analyze vehicle density at different intersections, allowing it to dynamically adjust signal
+timings, optimize traffic flow, and minimize congestion. Intelligent decision-making
+algorithms are also employed to adapt to various traffic scenarios, utilizing historical
+traffic data, machine learning techniques, and predefined rules. The system’s simulation using Flask provides a practical and user-friendly platform for testing, evaluation,
+and potential integration into real-world traffic management systems.</p>
+
+        <h2 class="section-title" style="margin-top:50px;">Contributors</h2>
+        <div class="contributors-container">
+            <div class="contributor">
+                <img src="{{ url_for('static', filename='ali.jpg') }}" alt="Contributor 1">
+                <div class="contributor-name">ALI ASLAH EP</div>
+                <a href="https://www.linkedin.com/in/aslah-ali">Connect</a>
+            </div>
+            <div class="contributor">
+                <img src="{{ url_for('static', filename='amal_pro.png') }}" alt="Contributor 2">
+                <div class="contributor-name">AMAL KAREEM UT</div>
+                <a href="https://www.linkedin.com/in/amalkareemut">Connect</a>
+            </div>
+            <div class="contributor">
+                <img src="{{ url_for('static', filename='ammar.jpg') }}" alt="Contributor 3">
+                <div class="contributor-name">AMMAR P</div>
+                <a href="https://www.linkedin.com/in/ammar-ar-b96534265">Connect</a>
+            </div>
+            <div class="contributor">
+                <img src="{{ url_for('static', filename='nakul.jpg') }}" alt="Contributor 4">
+                <div class="contributor-name">NAKUL VIJAY</div>
+                <a href="https://www.linkedin.com/in/nakul-vijay">Connect</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
