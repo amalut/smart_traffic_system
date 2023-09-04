@@ -1,11 +1,8 @@
 from flask import Flask, render_template
 import cv2
-import glob
 from vehicle_detector import VehicleDetector
 from screenshot import *
 from ssDelete import *
-import time
-import keyboard
 
 app = Flask(__name__)
 
