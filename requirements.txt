@@ -1,3 +1,3 @@
 flask
-Gunicorn
 opencv-python
+Gunicorn
