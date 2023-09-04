@@ -1,4 +1,8 @@
 import cv2
+import os
+
+# Set up a virtual display for OpenCV (headless mode)
+os.environ['DISPLAY'] = ':0.0'
 
 class VehicleDetector:
 
